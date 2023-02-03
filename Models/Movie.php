@@ -7,7 +7,7 @@ class Movie
     public $year;
     public $secondGenre;
 
-    public function __construct($title, $genre, $year)
+    public function __construct($title, Genre $genre, $year)
     {
         $this->title = $title;
         $this->genre = $genre;

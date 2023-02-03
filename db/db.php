@@ -2,12 +2,14 @@
 
 $backToTheFuture = [
     "title" => "Ritorno al futuro",
-    "genre" => "Sci-fi",
+    "primaryGenre" => "Sci-fi",
+    "secondaryGenre" => "Comedy",
     "year" => 1985
 ];
 
 $backToTheFutureII = [
     "title" => "Ritorno al futuro II",
-    "genre" => "Sci-fi",
+    "primaryGenre" => "Sci-fi",
+    "secondaryGenre" => "Comedy",
     "year" => 1989
 ];

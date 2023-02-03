@@ -2,11 +2,23 @@
 
 require_once __DIR__ . "/Models/Movie.php";
 include_once __DIR__ . "/db/db.php";
+require_once __DIR__ . "/Models/Genre.php";
 
 
 
-$ritornoAlFuturo = new Movie($backToTheFuture["title"], $backToTheFuture["genre"], $backToTheFuture["year"]);
-$ritornoAlFuturoII = new Movie($backToTheFutureII["title"], $backToTheFutureII["genre"], $backToTheFutureII["year"]);
+$ritornoAlFuturo =
+    new Movie(
+        $backToTheFuture["title"],
+        new Genre($backToTheFuture["primaryGenre"], $backToTheFuture["secondaryGenre"]),
+        $backToTheFuture["year"]
+    );
+
+$ritornoAlFuturoII =
+    new Movie(
+        $backToTheFutureII["title"],
+        new Genre($backToTheFutureII["primaryGenre"], $backToTheFutureII["secondaryGenre"]),
+        $backToTheFutureII["year"]
+    );
 
 ?>
 
@@ -24,23 +36,24 @@ $ritornoAlFuturoII = new Movie($backToTheFutureII["title"], $backToTheFutureII["
 <body>
     <main>
         <h1>
-            php-oop-1
+            Welocome to the best streaming service ever!!!
         </h1>
+        <h2>
+            Choose your movie from our giant collection! ;)
+        </h2>
 
         <pre>
             <?php echo $ritornoAlFuturo->title; ?>
-            <?php echo $ritornoAlFuturo->genre; ?>
+            <?php echo $ritornoAlFuturoII->genre->primaryGenre; ?>
+            <?php echo $ritornoAlFuturo->genre->secondaryGenre; ?>
             <?php echo $ritornoAlFuturo->year; ?>
-            <?php $ritornoAlFuturo->addSecondGenre("Comedy") ?>
-            <?php echo $ritornoAlFuturo->secondGenre; ?>
         </pre>
 
         <pre>
             <?php echo $ritornoAlFuturoII->title; ?>
-            <?php echo $ritornoAlFuturoII->genre; ?>
+            <?php echo $ritornoAlFuturoII->genre->primaryGenre; ?>
+            <?php echo $ritornoAlFuturoII->genre->secondaryGenre; ?>
             <?php echo $ritornoAlFuturoII->year; ?>
-            <?php $ritornoAlFuturoII->addSecondGenre("Comedy") ?>
-            <?php echo $ritornoAlFuturoII->secondGenre; ?>
         </pre>
 
     </main>
