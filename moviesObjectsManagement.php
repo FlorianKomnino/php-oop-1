@@ -6,18 +6,6 @@ require_once __DIR__ . "/Models/Movie.php";
 
 $moviesObjectsArray = [];
 
-// echo $singleMovie->title;
-// echo $singleMovie->genre->primaryGenre;
-// echo $singleMovie->genre->secondaryGenre;
-// echo $singleMovie->year;
-
-// foreach ($moviesDatas as $singleMovie) {
-//     echo $singleMovie->title;
-//     echo $singleMovie->genre->primaryGenre;
-//     echo $singleMovie->genre->secondaryGenre;
-//     echo $singleMovie->year;
-// }
-
 foreach ($moviesDatas as $singleMovie) {
     ${$singleMovie['name']} = new Movie(
         $singleMovie["title"],
