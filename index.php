@@ -5,6 +5,7 @@ require_once __DIR__ . "/Models/Movie.php";
 
 
 $ritornoAlFuturo = new Movie("Ritrono al Futuro", "Sci-fi", 1985);
+$ritornoAlFuturoII = new Movie("Ritrono al Futuro II", "Sci-fi", 1989);
 
 ?>
 
@@ -29,15 +30,18 @@ $ritornoAlFuturo = new Movie("Ritrono al Futuro", "Sci-fi", 1985);
             <?php echo $ritornoAlFuturo->title; ?>
             <?php echo $ritornoAlFuturo->genre; ?>
             <?php echo $ritornoAlFuturo->year; ?>
+            <?php $ritornoAlFuturo->addSecondGenre("Comedy") ?>
+            <?php echo $ritornoAlFuturo->secondGenre; ?>
         </pre>
 
-        <?php
-        $ritornoAlFuturo->addSecondGenre("Comedy")
-        ?>
+        <pre>
+            <?php echo $ritornoAlFuturoII->title; ?>
+            <?php echo $ritornoAlFuturoII->genre; ?>
+            <?php echo $ritornoAlFuturoII->year; ?>
+            <?php $ritornoAlFuturoII->addSecondGenre("Comedy") ?>
+            <?php echo $ritornoAlFuturoII->secondGenre; ?>
+        </pre>
 
-        <p>
-            <?php echo $ritornoAlFuturo->secondGenre; ?>
-        </p>
     </main>
 </body>
 
