@@ -5,6 +5,7 @@ class Movie
     public $title;
     public $genre;
     public $year;
+    public $secondGenre;
 
     public function __construct($title, $genre, $year)
     {
@@ -13,8 +14,8 @@ class Movie
         $this->year = $year;
     }
 
-    public function getYear()
+    public function addSecondGenre($genreToAdd)
     {
-        return $this->year;
+        $this->secondGenre = $genreToAdd;
     }
 }
