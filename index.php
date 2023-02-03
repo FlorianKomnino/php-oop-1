@@ -30,21 +30,24 @@ require_once __DIR__ . "/Models/Movie.php";
         <h2>
             Choose your movie from our giant collection! ;)
         </h2>
-
-        <div class="singleCard">
+        <div class="cardsContainer">
             <?php foreach ($moviesObjectsArray as $movieToShow) {  ?>
-
-                <?php echo $movieToShow['title']; ?>
-                <?php echo $movieToShow['primaryGenre']; ?>
-                <?php echo $movieToShow['secondaryGenre']; ?>
-                <?php echo $movieToShow['year']; ?>
-                </br>
+                <div class="singleCard">
+                    <p>
+                        Title: <?php echo $movieToShow['title']; ?>
+                    </p>
+                    <p>
+                        Genre: <?php echo $movieToShow['primaryGenre']; ?>
+                        , <?php echo $movieToShow['secondaryGenre']; ?>
+                    </p>
+                    <p>
+                        Year: <?php echo $movieToShow['year']; ?>
+                    </p>
+                </div>
             <?php
             }
-
             ?>
         </div>
-
     </main>
 </body>
 

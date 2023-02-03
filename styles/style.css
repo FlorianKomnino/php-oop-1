@@ -2,8 +2,25 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: rgb(205, 220, 232);
+}
+
+main {
+    background-color: rgb(11, 14, 52);
+    min-height: 100vh;
 }
 
 .singleCard {
-    background-color: magenta;
+    background-color: rgb(58, 10, 105);
+    padding: 2rem;
+    height: 150px;
+    width: 200px;
+    border-radius: 2rem;
+}
+
+.cardsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 200px;
+    flex-wrap: wrap;
 }
