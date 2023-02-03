@@ -1,11 +1,12 @@
 <?php
 
 require_once __DIR__ . "/Models/Movie.php";
+include_once __DIR__ . "/db/db.php";
 
 
 
-$ritornoAlFuturo = new Movie("Ritrono al Futuro", "Sci-fi", 1985);
-$ritornoAlFuturoII = new Movie("Ritrono al Futuro II", "Sci-fi", 1989);
+$ritornoAlFuturo = new Movie($backToTheFuture["title"], $backToTheFuture["genre"], $backToTheFuture["year"]);
+$ritornoAlFuturoII = new Movie($backToTheFutureII["title"], $backToTheFutureII["genre"], $backToTheFutureII["year"]);
 
 ?>
 
