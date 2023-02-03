@@ -1,24 +1,10 @@
 <?php
 
-require_once __DIR__ . "/Models/Movie.php";
 include_once __DIR__ . "/db/db.php";
+include_once __DIR__ . "/moviesObjectsManagement.php";
 require_once __DIR__ . "/Models/Genre.php";
+require_once __DIR__ . "/Models/Movie.php";
 
-
-
-$ritornoAlFuturo =
-    new Movie(
-        $backToTheFuture["title"],
-        new Genre($backToTheFuture["primaryGenre"], $backToTheFuture["secondaryGenre"]),
-        $backToTheFuture["year"]
-    );
-
-$ritornoAlFuturoII =
-    new Movie(
-        $backToTheFutureII["title"],
-        new Genre($backToTheFutureII["primaryGenre"], $backToTheFutureII["secondaryGenre"]),
-        $backToTheFutureII["year"]
-    );
 
 ?>
 
@@ -30,6 +16,9 @@ $ritornoAlFuturoII =
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/style.css">
+
     <title>php-oop-1</title>
 </head>
 
@@ -42,19 +31,19 @@ $ritornoAlFuturoII =
             Choose your movie from our giant collection! ;)
         </h2>
 
-        <pre>
-            <?php echo $ritornoAlFuturo->title; ?>
-            <?php echo $ritornoAlFuturoII->genre->primaryGenre; ?>
-            <?php echo $ritornoAlFuturo->genre->secondaryGenre; ?>
-            <?php echo $ritornoAlFuturo->year; ?>
-        </pre>
+        <div class="singleCard">
+            <?php foreach ($moviesObjectsArray as $movieToShow) {  ?>
 
-        <pre>
-            <?php echo $ritornoAlFuturoII->title; ?>
-            <?php echo $ritornoAlFuturoII->genre->primaryGenre; ?>
-            <?php echo $ritornoAlFuturoII->genre->secondaryGenre; ?>
-            <?php echo $ritornoAlFuturoII->year; ?>
-        </pre>
+                <?php echo $movieToShow['title']; ?>
+                <?php echo $movieToShow['primaryGenre']; ?>
+                <?php echo $movieToShow['secondaryGenre']; ?>
+                <?php echo $movieToShow['year']; ?>
+                </br>
+            <?php
+            }
+
+            ?>
+        </div>
 
     </main>
 </body>
