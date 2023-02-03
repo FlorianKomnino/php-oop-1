@@ -1,3 +1,14 @@
+<?php
+
+require_once __DIR__ . "/Models/Movie.php";
+
+
+
+$ritornoAlFuturo = new Movie("Ritrono al Futuro", "Sci-fi", 1985);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +24,12 @@
         <h1>
             php-oop-1
         </h1>
+
+        <pre>
+            <?php echo $ritornoAlFuturo->title; ?>
+            <?php echo $ritornoAlFuturo->genre; ?>
+            <?php echo $ritornoAlFuturo->year; ?>
+        </pre>
     </main>
 </body>
 
