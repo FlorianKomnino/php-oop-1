@@ -30,6 +30,11 @@ $ritornoAlFuturo = new Movie("Ritrono al Futuro", "Sci-fi", 1985);
             <?php echo $ritornoAlFuturo->genre; ?>
             <?php echo $ritornoAlFuturo->year; ?>
         </pre>
+
+        <p>
+            <?php echo $ritornoAlFuturo->getYear() ?>
+
+        </p>
     </main>
 </body>
 
